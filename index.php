@@ -64,9 +64,29 @@
                         <h1 class="display-4">Kuy,<br> <span class="font-weight-bold">main!</span></h1>
                         <hr class="my-4">
                         <p class="lead">Dipilih yuk gamenya</p>
-                        <a class="btn btn-primary btn-lg font-weight-bold" href="speedtyping.php" role="button">Speed Typing</a>
+                        <a class="btn btn-primary btn-lg font-weight-bold" href="#" role="button" data-toggle="modal" data-target="#speedtypingModal">Speed Typing</a>
                         <a class="btn btn-primary btn-lg font-weight-bold" href="#" role="button">Gibberish</a>
                     </div>
+
+                    <!-- Modal -->
+                    <div class="modal fade" id="speedtypingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Language</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">
+                        <p class="display-5">Pilih bahasa</p>
+                            <a class="btn btn-primary" href="speedtyping.php" role="button">English</a>
+                            <a class="btn btn-primary" href="mengetikcepat.php" role="button">Indonesia</a>
+                        </div>
+                        </div>
+                    </div>
+                    </div>
+
                 </div>
         ';}?>
 

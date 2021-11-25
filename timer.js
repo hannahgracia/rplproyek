@@ -61,11 +61,13 @@ function showGameOver(){
     error_text.textContent = wrongWords;
     errorContainer.style.display = "block";
 
+
     //show accuracy
     let correctWords = (userScore - (total_errors + errors));
     let accuracyVal = ((correctWords / userScore) * 100);
     accuracy_text.textContent = Math.round(accuracyVal);
     accuracyContainer.style.display = "block";
+
 }
 
 //onfocus useful for 'testBox' file

@@ -35,7 +35,6 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <a class="dropdown-item" href="edit-password.php">Change Password</a>
-                            <!-- <a class="dropdown-item" href="logout.php">Sign Out</a> -->
                             <hr class="dropdown-divider">
                             <a class="dropdown-item text-danger" href="logout.php">Sign Out</a>
                         </div>
@@ -53,11 +52,32 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
                 <p class="lead">This is a website where you can play simple games</p>
                 <hr class="my-4">
                 <p class="lead">Dipilih yuk gamenya</p>
-                <a class="btn btn-primary btn-lg font-weight-bold" href="speedtyping.php" role="button">Speed Typing</a>
-                <a class="btn btn-primary btn-lg font-weight-bold" href="3" role="button">Gibberish</a>
+                <a class="btn btn-primary btn-lg font-weight-bold" href="#" role="button" data-toggle="modal" data-target="#speedtypingModal">Speed Typing</a>
+                <a class="btn btn-primary btn-lg font-weight-bold" href="#" role="button">Gibberish</a>
             </div>
+
+                    <!-- Modal -->
+                <div class="modal fade" id="speedtypingModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLabel">Language</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                    <p class="display-5">Pilih bahasa</p>
+                        <a class="btn btn-primary" href="speedtyping.php" role="button">English</a>
+                        <a class="btn btn-primary" href="mengetikcepat.php" role="button">Indonesia</a>
+                    </div>
+                    </div>
+                </div>
+                </div>
+
         </div>
         
+
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>

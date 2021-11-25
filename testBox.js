@@ -12,6 +12,7 @@ let userScore = 0;
 let errors = 0;
 let accuracy = 0;
 
+
 //every time the user releases a key stroke
 let inputText = document.getElementById("write-box");
 window.addEventListener("keyup", event =>{
@@ -50,6 +51,7 @@ function shouldUserScore(userInput, prevWord){
         prevWord.style.color = "red";
         errors++;
     }
+
 }
 
 function isNewLine(prevWord, currentWord){
