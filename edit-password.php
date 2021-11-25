@@ -13,23 +13,25 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
-    <title>Lobby Games</title>
+    <link rel="stylesheet" type="text/css" href="indexstyle.css">
+
+    <title>Edit Password</title>
     </head>
     <body>
     
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
                 <div class="container">
-                <a class="navbar-brand" href="index.php">MASTER TYPING</a>
+                <a class="navbar-brand text-white" href="index.php">MASTER TYPING</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="index.php">Home</a>
+                        <a class="nav-link js-scroll-trigger text-white" href="index.php">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Account
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -43,8 +45,9 @@
                 </div>
         </nav>
 
-        <div class="container mt-5 col-lg-4 col-md-6 col-xs-10">
-        <h2 class="text-center">Change Password</h2>
+        <div class="jumbotron">
+            <div class="container mt-5 col-lg-4 col-md-6 col-xs-10">
+        <h1 class="display-4">Change Password</h1>
         <form action="edit-pass-check.php" method="post">
 
                 <?php
@@ -55,9 +58,9 @@
                 <p class="success"><?php echo $_GET['success']; ?></p>
                 <?php } ?>
 
-                <!-- <div class="form-group">
+                <div class="form-group">
                 <input type="password" name="op" class="form-control" placeholder="Current Password"><br>
-                </div> -->
+                </div>
                 <div class="form-group">
                 <input type="password" name="np" class="form-control" placeholder="New Password"><br>
                 </div>
@@ -68,7 +71,7 @@
 
             </form>
         </div>
-
+                </div>
         
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -7,29 +7,31 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="indexstyle.css">
 
     <title>Sign In</title>
   </head>
   <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
             <div class="container">
-            <a class="navbar-brand" href="index.php">MASTER TYPING</a>
+            <a class="navbar-brand text-white" href="index.php">MASTER TYPING</a>
             <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
                 <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="index.php">Home</a>
+                    <a class="nav-link js-scroll-trigger text-white" href="index.php">Home</a>
                 </li>
                 </ul>
             </div>
             </div>
     </nav>
 
+    <div class="jumbotron">
     <div class="container mt-5 col-lg-4 col-md-6 col-xs-10">
-        <h2 class="text-center">Sign In</h2>
+        <h1 class="display-4">Sign In</h1>
         <form action="login-check.php" method="post">
 
                 <?php
@@ -43,8 +45,9 @@
                 <input type="password" name="password" class="form-control" placeholder="Password"><br>
                 </div>
                 <button type="submit" class="btn btn-primary">SIGN IN</button>
-                <a href="signup.php">Create an Account</a>
+                <br><a class="text-white" href="signup.php">Create an Account</a>
             </form>
+    </div>
     </div>
 
     <!-- Optional JavaScript -->

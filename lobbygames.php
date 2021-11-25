@@ -12,23 +12,25 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="indexstyle.css">
+
     <title>Lobby Games</title>
     </head>
     <body>
     
-        <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+        <nav class="navbar navbar-expand-lg navbar-light bg-transparent fixed-top">
                 <div class="container">
-                <a class="navbar-brand" href="index.php">MASTER TYPING</a>
+                <a class="navbar-brand text-white" href="index.php">MASTER TYPING</a>
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
-                        <a class="nav-link js-scroll-trigger" href="index.php">Home</a>
+                        <a class="nav-link js-scroll-trigger text-white" href="index.php">Home</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Account
                         </a>
                         <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
@@ -44,16 +46,17 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
         </nav>
 
         <br>
-        <div class="container mt-5 col-lg-4 col-md-8">
         <div class="jumbotron">
-        <h1 class="display-4 text-center">Hello, <?php echo $_SESSION['username']; ?>!</h1>
-            <p class="lead">This is a website where you can play simple games</p>
-            <hr class="my-4">
-            <p>Choose the game</p>
-            <a class="btn btn-primary btn-lg" href="speedtyping.php" role="button">Speed Typing</a>
+            <div class="container">
+                <h1 class="display-4">Hello,<br>
+                        <span class="font-weight-bold"><?php echo $_SESSION['username']; ?>!</span></h1>
+                <p class="lead">This is a website where you can play simple games</p>
+                <hr class="my-4">
+                <p class="lead">Dipilih yuk gamenya</p>
+                <a class="btn btn-primary btn-lg font-weight-bold" href="speedtyping.php" role="button">Speed Typing</a>
+                <a class="btn btn-primary btn-lg font-weight-bold" href="3" role="button">Gibberish</a>
+            </div>
         </div>
-        </div>
-
         
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
