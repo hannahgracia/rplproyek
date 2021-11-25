@@ -18,10 +18,10 @@ if (isset($_POST['np'])
     $np = validate($_POST['np']);
     $c_np = validate($_POST['c_np']);
     
-    if(empty($op)){
-    header("Location: edit-password.php?error=Old Password is required");
-    exit();
-    }else 
+    // if(empty($op)){
+    // header("Location: edit-password.php?error=Old Password is required");
+    // exit();
+    // }else 
     if(empty($np)){
     header("Location: edit-password.php?error=New Password is required");
     exit();
@@ -29,8 +29,9 @@ if (isset($_POST['np'])
     header("Location: edit-password.php?error=The confirmation password  does not match");
     exit();
     }else {
-       $op = $op;
-        $np = $np;
+        // hashing the password
+    //    $op = ($op);
+        $np = ($np);
         $id = $_SESSION['user_id'];
 
         $sql = "SELECT password
@@ -50,7 +51,9 @@ if (isset($_POST['np'])
             exit();
         }
 
-    } 
+    }
+
+    
 }else{
     header("Location: edit-password.php");
     exit();

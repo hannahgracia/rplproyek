@@ -7,7 +7,10 @@ let isFocus = false;
 let testBoxText = document.getElementById("test-box-text");
 let minusMarginTop = 0;
 //score
+let total_errors = 0;
 let userScore = 0;
+let errors = 0;
+let accuracy = 0;
 
 //every time the user releases a key stroke
 let inputText = document.getElementById("write-box");
@@ -45,6 +48,7 @@ function shouldUserScore(userInput, prevWord){
         userScore++;
     }else{
         prevWord.style.color = "red";
+        errors++;
     }
 }
 

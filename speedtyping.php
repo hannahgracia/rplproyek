@@ -33,16 +33,6 @@
                     echo "<span>".$value."</span>";
                     }
                 ?>
-                <script>
-                //     function sortWords(<?php $data ?>){
-                //         let wordStore = [];
-                //         for(let i=0; i<500; i++){
-                //             let randomIndex = Math.floor(Math.random() * 3000);
-                //             wordStore.push(unfilteredWords[randomIndex].word);
-                //         }
-                //         return wordStore;
-                //     }
-                // </script>
             </div>
         </section>
             <form>
@@ -55,6 +45,14 @@
         <section id="score">
             <p>You Scored:</p>
             <p id="score-st-wpm"></p>
+        </section>
+        <section id="error">
+            <p>Wrong Words:</p>
+            <p id="curr_error"></p>
+        </section>
+        <section id="accuracy">
+            <p>Accuracy:</p>
+            <p id="curr_accuracy"></p> 
         </section>
         <!--Scripts do not touch-->
         <script src="testBox.js" defer></script>

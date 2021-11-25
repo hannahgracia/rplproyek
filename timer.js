@@ -6,6 +6,10 @@ inputText.value = '';
 //score values to be shown on game end
 let scoreContainer = document.getElementById("score");
 let scoreWPM = document.getElementById("score-st-wpm");
+let errorContainer = document.getElementById("error");
+let error_text = document.getElementById("curr_error");
+let accuracyContainer = document.getElementById("accuracy");
+let accuracy_text = document.getElementById("curr_accuracy");
 
 function inputType(input){
     let textInput = input.value;
@@ -51,6 +55,17 @@ function showGameOver(){
     let wordsPerMinute = Math.round((userScore / 60) * 100);
     scoreWPM.textContent = wordsPerMinute + "WPM";
     scoreContainer.style.display = "block";
+
+    //show wrong words
+    let wrongWords = total_errors + errors;
+    error_text.textContent = wrongWords;
+    errorContainer.style.display = "block";
+
+    //show accuracy
+    let correctWords = (userScore - (total_errors + errors));
+    let accuracyVal = ((correctWords / userScore) * 100);
+    accuracy_text.textContent = Math.round(accuracyVal);
+    accuracyContainer.style.display = "block";
 }
 
 //onfocus useful for 'testBox' file
