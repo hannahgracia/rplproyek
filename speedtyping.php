@@ -1,6 +1,7 @@
 <?php
 session_start();
 if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
+    include "db_conn.php";
 ?>
 
 <!DOCTYPE html>
@@ -33,16 +34,6 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
                     echo "<span>".$value."</span>";
                     }
                 ?>
-                <script>
-                //     function sortWords(<?php $data ?>){
-                //         let wordStore = [];
-                //         for(let i=0; i<500; i++){
-                //             let randomIndex = Math.floor(Math.random() * 3000);
-                //             wordStore.push(unfilteredWords[randomIndex].word);
-                //         }
-                //         return wordStore;
-                //     }
-                // </script>
             </div>
         </section>
             <form>
@@ -56,14 +47,30 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
             <p>You Scored:</p>
             <p id="score-st-wpm"></p>
         </section>
-        <section id="error">
+
+     <!--    masukin database, belom bisa
+        
+                <?php
+            //     $id = $_SESSION['user_id'];
+                    $playerid = intval($_SESSION['user_id']);
+                    $tanggal = date("Y/m/d");
+                    $waktu = date("h:i:sa");
+                    $sql2 = "INSERT INTO user_score VALUES(?,?,?)";
+                    $stmt = $conn->prepare($sql2);
+                    if($stmt !== FALSE) {
+                        // do the binds...etc
+                        $stmt->bind_param("sss", $playerid, $tanggal, $waktu);
+                        $stmt->execute();
+                    }
+        ?> -->
+        <!-- <section id="error">
             <p>Wrong Words:</p>
             <p id="curr_error"></p>
         </section>
         <section id="accuracy">
             <p>Accuracy:</p>
             <p id="curr_accuracy"></p> 
-        </section>
+        </section> -->
         <!--Scripts do not touch-->
         <script src="testBox.js" defer></script>
         <script src="timer.js" defer></script>

@@ -6,6 +6,7 @@ inputText.value = '';
 //score values to be shown on game end
 let scoreContainer = document.getElementById("score");
 let scoreWPM = document.getElementById("score-st-wpm");
+//let userSetScore = document.getElementById("user-score");
 let errorContainer = document.getElementById("error");
 let error_text = document.getElementById("curr_error");
 let accuracyContainer = document.getElementById("accuracy");
@@ -55,6 +56,7 @@ function showGameOver(){
     let wordsPerMinute = Math.round((userScore / 60) * 100);
     scoreWPM.textContent = wordsPerMinute + "WPM";
     scoreContainer.style.display = "block";
+  //  userSetScore = wordsPerMinute;
 
     //show wrong words
     let wrongWords = total_errors + errors;
