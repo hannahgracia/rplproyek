@@ -65,7 +65,7 @@
                         <hr class="my-4">
                         <p class="lead">Dipilih yuk gamenya</p>
                         <a class="btn btn-primary btn-lg font-weight-bold" href="#" role="button" data-toggle="modal" data-target="#speedtypingModal">Speed Typing</a>
-                        <a class="btn btn-primary btn-lg font-weight-bold" href="#" role="button">Gibberish</a>
+                        <a class="btn btn-primary btn-lg font-weight-bold" href="gibberish.php" role="button">Gibberish</a>
                     </div>
 
                     <!-- Modal -->

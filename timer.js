@@ -6,11 +6,12 @@ inputText.value = '';
 //score values to be shown on game end
 let scoreContainer = document.getElementById("score");
 let scoreWPM = document.getElementById("score-st-wpm");
-//let userSetScore = document.getElementById("user-score");
+let userSetScore = document.getElementById("setScore");
 let errorContainer = document.getElementById("error");
 let error_text = document.getElementById("curr_error");
 let accuracyContainer = document.getElementById("accuracy");
 let accuracy_text = document.getElementById("curr_accuracy");
+let buttonbackContainer = document.getElementById("buttonback");
 
 function inputType(input){
     let textInput = input.value;
@@ -56,7 +57,6 @@ function showGameOver(){
     let wordsPerMinute = Math.round((userScore / 60) * 100);
     scoreWPM.textContent = wordsPerMinute + "WPM";
     scoreContainer.style.display = "block";
-  //  userSetScore = wordsPerMinute;
 
     //show wrong words
     let wrongWords = total_errors + errors;
@@ -69,6 +69,21 @@ function showGameOver(){
     let accuracyVal = ((correctWords / userScore) * 100);
     accuracy_text.textContent = Math.round(accuracyVal);
     accuracyContainer.style.display = "block";
+
+    //INI BIKIN BUTTON YG BALIK KE HOME
+    var btn = document.createElement("BUTTON");   // Create a <button> element
+    btn.innerHTML = "Back to Home";                   // Insert text
+    btn.setAttribute('onclick', 'window.location.href="./index.php"');
+    document.body.appendChild(btn);  
+
+    var userId = $("#user-id").text();
+
+    $.ajax({
+        dataType: 'json',
+        type:'POST',
+        url: url + "./update.php",
+        data:{user_id:userId, scores:wordsPerMinute} //set data yg pengen dimasukin
+    });
 
 }
 

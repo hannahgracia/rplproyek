@@ -2,6 +2,8 @@
 session_start();
 if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
     include "db_conn.php";
+    $status = 'FALSE';
+    echo '<span style="display:none" id="user-id">'.$_SESSION["user_id"].'</span>';
 ?>
 
 <!DOCTYPE html>
@@ -46,6 +48,15 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
         <section id="score">
             <p>You Scored:</p>
             <p id="score-st-wpm"></p>
+        </section>
+
+        <section id="error">
+            <p>Wrong Words:</p>
+            <p id="curr_error"></p>
+        </section>
+        <section id="accuracy">
+            <p>Accuracy:</p>
+            <p id="curr_accuracy"></p> 
         </section>
         <!--Scripts do not touch-->
         <script src="testBox.js" defer></script>

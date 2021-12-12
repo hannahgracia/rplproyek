@@ -12,7 +12,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE-edge" />
         <meta name="viewport" content="width-device-width, initial-scale-1.0" />
-        <title>Speed Typing</title>
+        <title>Gibberish</title>
         <link rel="stylesheet" href="ststyle.css" />
     </head>
     <body>
@@ -20,7 +20,7 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
         <section id="test-box">
             <div id="test-box-text">
                 <?php
-                    $sql = "SELECT word FROM words";
+                    $sql = "SELECT word FROM gibberish";
                     $result = mysqli_query($conn, $sql);
                     $data = array();
                     $wordArray = array();
@@ -29,13 +29,23 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
                     }
 
                     for($i=0; $i<500; $i++){
-                    $randomIndex = rand(0, 2999);
+                    $randomIndex = rand(0, 432);
                     $wordArray[$i] = strval($data[$randomIndex]);
                     }
                     foreach ($wordArray as $value) {
                     echo "<span>".$value."</span>";
                     }
                 ?>
+                <script>
+                //     function sortWords(<?php $data ?>){
+                //         let wordStore = [];
+                //         for(let i=0; i<500; i++){
+                //             let randomIndex = Math.floor(Math.random() * 3000);
+                //             wordStore.push(unfilteredWords[randomIndex].word);
+                //         }
+                //         return wordStore;
+                //     }
+                // </script>
             </div>
         </section>
             <form>
@@ -57,7 +67,6 @@ if (isset($_SESSION['user_id']) && isset($_SESSION['username'])) {
             <p>Accuracy:</p>
             <p id="curr_accuracy"></p> 
         </section>
-
         <!--Scripts do not touch-->
         <script src="testBox.js" defer></script>
         <script src="timer.js" defer></script>
